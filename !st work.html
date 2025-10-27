@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Responsive Website</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+ 
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+
+    section {
+      padding: 50px;
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1s forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.5s; }
+    section:nth-of-type(3) { animation-delay: 1s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section img {
+      max-width: 160px;
+      border-radius: 50%;
+      margin: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+
+    section img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+
+    button {
+      background: #333;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffcc00;
+      color: black;
+      transform: scale(1.1);
+    }
+
+
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 My Website</h1>
+
+ 
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="./profile pic.jpg" width="350px" height="200px" alt="Profile Picture">
+    <p>About Me
+I am Mohammed, a passionate Web Developer and Graphic Designer with a keen eye for creativity and a commitment to excellence. My journey into the world of design and development began from a deep curiosity about how visuals and technology come together to shape meaningful digital experiences. Over time, that curiosity grew into a full-fledged passion — one that drives me to build websites that are not only visually appealing but also fast, functional, and user-friendly.
+
+With hands-on experience in front-end web technologies and design tools, I enjoy turning concepts into interactive, polished, and responsive websites. I approach every project with a balance of creativity and technical precision, ensuring that each design communicates effectively and every line of code serves a clear purpose. Beyond the screen, I’m constantly learning, exploring new trends, and refining my craft to stay ahead in this ever-evolving field
+
+.What truly defines my work is my belief that design is more than aesthetics — it’s about connection, clarity, and impact. Whether I’m coding a website or designing brand visuals, my goal is to create experiences that leave a lasting impression and help brands tell their stories beautifully.
+
+As I continue to grow in my career, I’m seeking opportunities to collaborate with individuals and organizations that value innovation, creativity, and quality. My aim is to contribute my skills to projects that make a difference — whether through freelance work, professional collaborations, or long-term roles that challenge me to push the boundaries of design and technology.</p>
+    <button onclick="alert('Thanks for visiting! 🌟')">Click Me</button>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p><a href="./shoe business.html" target="_blank">OMAH Footwear</a></p>
+    <p><a href="./Glowup.html" target="_blank">Glowup cosmetics</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📩 Email: <a href="adinoyiahmed01@gmail.com">adinoyiahmed01@gmail.com</a></p>
+    <p>🔗 Follow me on <a href="https://x.com/MohammedAh11384?t=YuNxIvBQn8h1vpC7bnIkpw&s=08">Twitter</a> or <a href="https://www.instagram.com/ahmedmohammed915?igsh=eDBvd3lnN3VsazFi">Instagram</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Responsive Website | Built with ❤️</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
